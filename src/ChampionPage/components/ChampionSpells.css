@@ -1,0 +1,48 @@
+.champion-page-skill-group {
+    display: inline;
+    font-weight: bolder;
+    flex-direction: row;
+    align-self: auto;
+    font-size:14px;
+    padding: 10px;
+    justify-content: space-between;
+}
+.champion-page-skill-item {
+    display: flex;
+    border:1px solid gainsboro;
+    padding: 10px;
+    border-radius: 5px 20px 5px;
+    color: azure;
+    background: #0F2027;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.champion-page-spells {
+    grid-area: spells;
+    padding: 10px;
+}
+
+.champion-page-spell-header {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    color:gainsboro;
+ }
+.champion-page-skill-item:hover {
+    border:3px solid gainsboro;
+}
+.champion-page-skill-item-image {
+    align-self: center;
+    border-radius: 5px 20px 5px;
+    border:5px solid firebrick;
+}
+.champion-page-skill-item-header {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.champion-page-skill-item-name {
+    color:tomato;
+    padding: 5px;
+}

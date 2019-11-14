@@ -1,0 +1,32 @@
+.champion-page-tips {
+    grid-area:tips;
+}
+.champion-page-tips-header {
+    text-align: center;
+    text-transform: uppercase;
+}
+.champion-page-tips-list {
+    display:flex;
+    flex-direction: row;
+    font-size:16px;
+}
+.champion-page-tips-list-item {
+    display: flex;
+    flex-direction: column;
+}
+.champion-page-tips-list-item > ul {
+  list-style: none;
+}
+
+.champion-page-tips-list-item > ul > li {
+    padding: 10px;
+    border:1px solid gainsboro;
+    border-radius: 5px 5px 5px 5px;
+    background: #0F2027;
+}
+
+.champion-page-tips-list-item > ul > li:hover {
+    color:black;
+    border:1px solid tomato;
+    background:white;
+}

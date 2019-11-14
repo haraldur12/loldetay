@@ -1,0 +1,22 @@
+.champion-page-stats {
+    grid-area: stats;
+    padding: 20px;
+}
+
+.champion-page-stat {
+    display: flex;
+    justify-content: space-between;
+}
+.champion-page-stat:hover {
+    color:tomato;
+    cursor: pointer;
+}
+.champion-page-stats-icon {
+    width: 16px;
+    height: 16px;
+}
+.champion-page-stats-name {
+    color:azure;
+    font-style: italic;
+    font-weight: lighter;
+}

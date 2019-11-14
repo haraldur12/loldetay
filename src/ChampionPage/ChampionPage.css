@@ -1,0 +1,50 @@
+.champion-page {
+    display: grid;
+    background-repeat: no-repeat;
+    grid-gap: 20px;
+    color:gainsboro;
+    font-weight: bolder;
+    font-size:20px;
+    grid-template-columns: 350px 400px 500px 500px;
+    grid-template-rows: 40px auto 800px;
+    background-size: cover;
+    grid-template-areas: 
+        "lore . . spells"
+        "lore tips tips spells"
+        "lore stats . spells";
+}
+
+.champion-page-title {
+   font-size: 20px;
+   font-weight: bolder;
+   color: gainsboro;
+   font-weight: boldtips;
+   padding: 20px;
+}
+
+.champion-page-lore-info {
+    padding: 10px;
+    font-size:14px;
+    background: rgb(26, 67, 85);
+    font-weight: bolder;
+    color:gainsboro;
+    border:1px solid gainsboro;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.champion-page-lore {
+    grid-area: lore;
+    padding: 19px;
+    font-size:14px;
+    font-weight: bolder;
+    color:gainsboro;
+}
+
+
+.champion-page-image {
+    margin:0 auto;
+    border: 3px solid tomato;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
