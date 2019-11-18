@@ -15,7 +15,8 @@
     flex-direction: column;
 }
 .champion-page-tips-list-item > ul {
-  list-style: none;
+    padding: 10px;
+    list-style-type: none;
 }
 
 .champion-page-tips-list-item > ul > li {

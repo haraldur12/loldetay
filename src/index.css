@@ -1,13 +1,26 @@
 html {
   background: #0F2027;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+  background-image: linear-gradient( 89.7deg,  rgba(0,0,0,1) -10.7%, rgba(53,92,125,1) 88.8% );
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-size: 15px;
 }
+body {
+  margin:0px;
+}
 .champions-index {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  padding:10px;
   grid-gap: 10px;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+@media (max-width:48em){
+  .champions-index {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+    padding: 20px;
+  }
 }

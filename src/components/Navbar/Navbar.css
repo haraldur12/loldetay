@@ -1,0 +1,74 @@
+.navbar {
+  background: #e2e2e2;
+}
+nav {
+  display: block;
+}
+
+.navbar .toggle, .navbar .brand {
+  display: inline-block;
+}
+.navbar .link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  background: seagreen;
+  color: white;
+}
+.navbar .link:hover, .navbar .link:active .link:focus .link:visited {
+  background: black;
+  text-decoration: none;
+  color:gainsboro;
+}
+.navbar .brand {
+  width: 10em;
+  text-align: center;
+  padding: 1em;
+  color: darkcyan;
+  font-weight: bolder;
+  background: black;
+  text-transform: uppercase;
+}
+.navbar .toggle {
+  padding: 1em;
+  color: black;
+}
+
+@media (min-width: 48em) {
+  .navbar {
+    display: flex;
+  }
+  .navbar .left, .navbar .right {
+    display: flex;
+    flex: 1;
+  }
+  .navbar .link {
+    width: auto;
+  }
+  .navbar .right {
+    justify-content: flex-end;
+  }
+  .navbar .toggle {
+    display: none;
+  }
+}
+.navbar div {
+  display: none;
+}
+@media (min-width: 48em) {
+  .navbar div {
+    display: flex;
+  }
+}
+
+@media (max-width: 48em) {
+  .navbar.active .toggle {
+    background: seagreen;
+    color: white;
+  }
+  .navbar.active div {
+    display: block;
+  }
+}
