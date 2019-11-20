@@ -57,7 +57,7 @@ const ChampionPage: FunctionComponent<{ match: any }> = ({ match }) => {
         getChampion(name).then(res => {
             setChampions(res.data[name]);
         });
-    });
+    }, []);
     const { spells, name: championName, title, stats, allytips, enemytips } = champion;
 
     return (

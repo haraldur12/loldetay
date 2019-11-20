@@ -10,7 +10,9 @@ const Navbar: FunctionComponent = () => {
             <span onClick={(): void => setActive(!isActive)} className="toggle">
                 <i className="fa fa-reorder"></i>
             </span>
-            <span className="brand">LoL Detay</span>
+            <Link to="/">
+                <span className="brand">LoL Detay</span>
+            </Link>
             <div className="left">
                 <Link to="/champions" className="link">
                     Sampiyonlar

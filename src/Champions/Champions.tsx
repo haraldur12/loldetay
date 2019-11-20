@@ -21,7 +21,7 @@ const Champions: FunctionComponent = () => {
         getChampions().then(res => {
             setChampions(res.data);
         });
-    });
+    }, []);
 
     return (
         <div className="champions-index">

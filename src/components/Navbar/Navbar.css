@@ -10,7 +10,6 @@ nav {
 }
 .navbar .link {
   display: block;
-  width: 100%;
   text-align: center;
   padding: 1em;
   text-decoration: none;
@@ -42,10 +41,10 @@ nav {
   }
   .navbar .left, .navbar .right {
     display: flex;
-    flex: 1;
+    flex: 1 0 0;
   }
   .navbar .link {
-    width: auto;
+    max-width: inherit;
   }
   .navbar .right {
     justify-content: flex-end;
