@@ -26,13 +26,24 @@ const Items: FunctionComponent = () => {
     return (
         <div className="items-index" id="items-wrapper">
             <div>
-                {Object.keys(tags).map(tag => {
-                    return (
-                        <div className="items-menu-label" key={tag} onClick={(): void => setActiveSection(tag)}>
-                            {tags[tag]}
-                        </div>
-                    );
-                })}
+                <div className={`items-menu ${isMenuActive ? 'active' : ''}`}>
+                    <span onClick={(): void => setMenuStatus(!isMenuActive)} className="toggle">
+                        <i className="fa fa-expand"></i>
+                        <span className="category-header">Kategoriler</span>
+                    </span>
+                    {Object.keys(tags).map(tag => {
+                        return (
+                            <div
+                                style={{ display: isMenuActive ? 'block' : '' }}
+                                className="items-menu-label"
+                                key={tag}
+                                onClick={(): void => setActiveSection(tag)}
+                            >
+                                {tags[tag]}
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
             <main className="items-item-show-room" id="show-room">
                 {Object.keys(items).map((itemId: string) => {
