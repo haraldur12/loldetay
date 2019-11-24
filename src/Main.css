@@ -4,12 +4,16 @@
     color:gainsboro;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     padding:150px;
+    min-height: 800px;
     align-items: center;
     margin: 0 auto;
 }
-
+.main-background {
+    background-size:cover;
+    background-repeat: no-repeat;
+}
 @media (max-width:48em){
     .main {
         padding: 10px;

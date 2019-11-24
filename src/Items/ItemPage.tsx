@@ -1,4 +1,5 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { getItems } from './utilities/getItems';
 import ReactTooltip from 'react-tooltip';
 import './ItemPage.css';
@@ -11,8 +12,14 @@ interface Item {
         purchasable: boolean;
         sell: string;
     };
+    into: string[];
 }
-
+type Builds = {
+    [index: string]: {
+        name: string;
+        plaintext: string;
+    };
+};
 const ItemPage: FunctionComponent<{ match: any }> = ({ match }) => {
     const itemId = match.params.itemId;
     const [item, setItems] = useState<Item>({
@@ -23,12 +30,24 @@ const ItemPage: FunctionComponent<{ match: any }> = ({ match }) => {
             purchasable: true,
             sell: '',
         },
+        into: [],
     });
+    const [builds, setBuilds] = useState<Builds>({});
+
     useEffect(() => {
         getItems().then(res => {
+            const currentItem = res.data[itemId];
+            const { into = [] } = currentItem;
             setItems(res.data[itemId]);
+            const intoInfos: { [index: string]: { name: string; plaintext: string } } = {};
+            into.forEach((itemId: string): void => {
+                const intoItem = res.data[itemId];
+                const { name = '', plaintext = '' } = intoItem;
+                intoInfos[itemId] = { name, plaintext };
+            });
+            setBuilds(intoInfos);
         });
-    }, []);
+    }, [itemId]);
     return (
         <div className="item-page">
             <div className="item-page-info">
@@ -51,6 +70,29 @@ const ItemPage: FunctionComponent<{ match: any }> = ({ match }) => {
                 </div>
                 <ReactTooltip />
             </div>
+            {item.into && (
+                <div className="item-builds-into">
+                    <span className="item-builds-into-header">Kombinasyonlar</span>
+                    {item.into.map(itemId => {
+                        if (builds[itemId]) {
+                            return (
+                                <Link to={`/item/${itemId}`}>
+                                    <div className="item-page-info" key={itemId}>
+                                        <img
+                                            className="item-page-info-image"
+                                            src={`http://ddragon.leagueoflegends.com/cdn/9.22.1/img/item/${itemId}.png`}
+                                        />
+                                        <div>
+                                            <div className="item-page-info-header">{builds[itemId].name}</div>
+                                            <div className="item-page-info-text">{builds[itemId].plaintext}</div>
+                                        </div>
+                                    </div>
+                                </Link>
+                            );
+                        }
+                    })}
+                </div>
+            )}
         </div>
     );
 };

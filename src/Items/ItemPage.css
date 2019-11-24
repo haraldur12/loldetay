@@ -6,12 +6,19 @@
     font-weight: bolder;
     font-size:20px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto 800px;
+    grid-template-rows: 150px 150px 800px;
     background-size: cover;
     grid-template-areas: 
-        "info sell . spells"
-        "lore tips tips spells"
-        "lore stats . spells";
+        "info sell"
+        "builds builds"
+}
+.item-builds-into {
+    grid-area: builds;
+    display: flex;
+    flex-direction: column;
+}
+.item-builds-into-header {
+    text-align: center;
 }
 @media (max-width: 620px) {
     .item-page {
@@ -22,6 +29,7 @@
       grid-template-areas: 
       "info"
       "sell"
+      "builds"
     }
     .item-page-info {
         flex-direction: column;

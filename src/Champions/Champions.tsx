@@ -1,6 +1,7 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 import { getChampions } from './utilities/getChampions';
 import { Champion } from './Champion';
+import './Champions.css';
 
 interface Champion {
     [index: string]: {

@@ -8,7 +8,7 @@ const tags: tags = {
     Boots: 'Ayakkabilar',
     AttackSpeed: 'Saldiri Hizi',
     Armor: 'Zirh',
-    Attack: 'Saldiri Gucu',
+    Damage: 'Saldiri Gucu',
     CoolDownReduction: 'Zaman Azaltma',
     SpellBlock: 'Buyu Kesme',
     Health: 'Can',

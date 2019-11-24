@@ -1,5 +1,4 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
-import { slide as Menu } from 'react-burger-menu';
 import { getItems } from './utilities/getItems';
 import { Item } from './Item';
 import { tags } from './constants';
@@ -27,22 +26,25 @@ const Items: FunctionComponent = () => {
         <div className="items-index" id="items-wrapper">
             <div>
                 <div className={`items-menu ${isMenuActive ? 'active' : ''}`}>
-                    <span onClick={(): void => setMenuStatus(!isMenuActive)} className="toggle">
-                        <i className="fa fa-expand"></i>
-                        <span className="category-header">Kategoriler</span>
-                    </span>
                     {Object.keys(tags).map(tag => {
                         return (
                             <div
                                 style={{ display: isMenuActive ? 'block' : '' }}
                                 className="items-menu-label"
                                 key={tag}
-                                onClick={(): void => setActiveSection(tag)}
+                                onClick={(): void => {
+                                    setActiveSection(tag);
+                                    setMenuStatus(!isMenuActive);
+                                }}
                             >
                                 {tags[tag]}
                             </div>
                         );
                     })}
+                    <span onClick={(): void => setMenuStatus(!isMenuActive)} className="toggle">
+                        <i className="fa fa-toggle-up"></i>
+                        <span className="category-header">Kategoriler</span>
+                    </span>
                 </div>
             </div>
             <main className="items-item-show-room" id="show-room">

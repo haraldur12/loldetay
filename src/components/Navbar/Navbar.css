@@ -1,5 +1,6 @@
 .navbar {
-  background: #e2e2e2;
+  background: black;
+
 }
 nav {
   display: block;
@@ -13,11 +14,10 @@ nav {
   text-align: center;
   padding: 1em;
   text-decoration: none;
-  background: seagreen;
   color: white;
 }
 .navbar .link:hover, .navbar .link:active .link:focus .link:visited {
-  background: black;
+  background: azure(218, 206, 206);
   text-decoration: none;
   color:gainsboro;
 }
@@ -32,7 +32,7 @@ nav {
 }
 .navbar .toggle {
   padding: 1em;
-  color: black;
+  color: gainsboro;
 }
 
 @media (min-width: 48em) {
