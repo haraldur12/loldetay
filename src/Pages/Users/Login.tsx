@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useState } from 'react';
-import { withFirebase } from '../services/Firebase';
+import { withFirebase } from '../../services';
 import { Link } from 'react-router-dom';
 
 import './Form.css';

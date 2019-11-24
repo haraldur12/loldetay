@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useState } from 'react';
-import { FirebaseContext } from '../services/Firebase';
+import { FirebaseContext } from '../../services/';
 
 import './Form.css';
 

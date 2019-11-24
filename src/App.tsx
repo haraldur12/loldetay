@@ -1,13 +1,10 @@
 import React, { FunctionComponent } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Main } from './Main';
-import { ChampionPage, Champions } from './Champions';
-import { ItemPage, Items } from './Items';
-import { withAuthorization } from './services/Session/withAuthHOC';
+import { ChampionPage, Champions, ItemPage, Items, Register, Login, Tutorials } from './Pages';
+import { withAuthorization } from './services/';
 
 import { Navbar } from './components/Navbar/';
-import { Tutorials } from './Tutorials';
-import { Register, Login } from './Users';
 
 const App: FunctionComponent = () => {
     return (

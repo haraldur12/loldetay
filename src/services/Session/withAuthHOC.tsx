@@ -2,12 +2,11 @@ import React, { ComponentType } from 'react';
 import { AuthUserContext } from './context';
 import { withFirebase } from '../Firebase';
 import { compose } from 'recompose';
-import { withRouter } from 'react-router-dom';
 
 type AuthState = {
     authUser: null;
 };
-const withAuthorization = (Component: ComponentType) => {
+const withAuthorization = (Component: ComponentType): ComponentType => {
     class WithAuthentication extends React.Component<{ firebase: any }, AuthState> {
         public listener: any;
         constructor(props: any) {

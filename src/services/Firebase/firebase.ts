@@ -1,6 +1,6 @@
 import app from 'firebase/app';
 import 'firebase/auth';
-import 'firebase/database';
+import 'firebase/firestore';
 
 const config = {
     apiKey: process.env.REACT_APP_API_KEY,
@@ -13,29 +13,34 @@ const config = {
 
 export class Firebase {
     private auth: any;
+    private database: any;
     constructor() {
         app.initializeApp(config);
         this.auth = app.auth();
+        this.database = app.firestore();
     }
-    createUserWithEmailAndPassword = (email: string, password: string, displayName: string) =>
+    public createUserWithEmailAndPassword = (email: string, password: string, displayName: string) =>
         this.auth.createUserWithEmailAndPassword(email, password).then((result: any) => {
             result.user.updateProfile({
                 displayName,
             });
         });
-    signInWithEmailAndPassword = (email: string, password: string) =>
+    public signInWithEmailAndPassword = (email: string, password: string) =>
         this.auth.signInWithEmailAndPassword(email, password);
-    signOut = () => this.auth.signOut();
-    getUserInfo = () => {
+    public signOut = () => this.auth.signOut();
+    public getUserInfo = () => {
         if (this.auth.currentUser) {
             return this.auth.currentUser;
         }
         return {};
     };
-    getData = () => {
-        const tutorials = app.database().ref('tutorials');
-        tutorials.on('value', snapshot => {
-            console.log(snapshot.val());
-        });
+    getData = async () => {
+        return this.database
+            .collection('tutorials')
+            .get()
+            .then((snapshot: any) => {
+                const data = snapshot.docs.map((doc: { data: Function }) => doc.data());
+                return data;
+            });
     };
 }
