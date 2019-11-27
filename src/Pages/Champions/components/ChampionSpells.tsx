@@ -1,16 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import './ChampionSpells.css';
 
-type Spell = {
-    image: {
-        group: string;
-        full: string;
-    };
-    id: string;
-    name: string;
-    description: string;
-};
-
 const ChampionSpells: FunctionComponent<{ spells: Array<Spell> }> = ({ spells }) => {
     return (
         <div className="champion-page-spells">
