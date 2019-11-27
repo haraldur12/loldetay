@@ -1,0 +1,37 @@
+.tutorial-page{
+    color:gainsboro;
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: '. tutorial .'
+}
+.tutorial-page-block {
+    grid-area: tutorial;
+}
+.tutorial-page-skills {
+    display: flex;
+    flex-direction: column;
+}
+.tutorial-page-skill-row {
+    display: flex;
+    flex-direction: row;
+}
+.tutorial-page-skill-box {
+    border:1px solid gainsboro;
+    margin:5px;
+    width:48px;
+    height:48px;
+    background: #0F2027;
+}
+
+.tutorial-page-skill-box-filled {
+    border:1px solid gainsboro;
+    margin:5px;
+    width:48px;
+    height:48px;
+    background:greenyellow;
+}
+.tutorial-page-skill-item-image {
+    width:48px;
+    height:48px;
+    margin:5px;
+}

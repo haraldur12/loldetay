@@ -3,7 +3,7 @@ export const withFirebase = function withComponent(Component: any) {
     return function withConsumer(props: object): any {
         return (
             <FirebaseContext.Consumer>
-                {(firebase: any) => <Component {...props} firebase={firebase} currentUser={firebase.getUserInfo()} />}
+                {(firebase: any) => <Component {...props} firebase={firebase} />}
             </FirebaseContext.Consumer>
         );
     };

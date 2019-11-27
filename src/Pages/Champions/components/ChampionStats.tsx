@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import { IMAGES } from '../constants';
 import './ChampionStats.css';
 
-const ChampionStats: FunctionComponent<{ stats: { [key: string]: string } }> = ({ stats }) => {
+const ChampionStats: FunctionComponent<{ stats: Stats }> = ({ stats }) => {
     const neededFields = ['hp', 'mp', 'range', 'attackdamage', 'attackspeed', 'hpregen', 'armor', 'crit'];
     return (
         <div className="champion-page-stats">

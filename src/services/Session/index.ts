@@ -1,1 +1,2 @@
-export { withAuthorization } from './withAuthHOC';
+export { withAuthentication } from './withAuthentication';
+export { AuthUserContext } from './context';

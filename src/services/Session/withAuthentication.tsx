@@ -1,22 +1,27 @@
 import React, { ComponentType } from 'react';
 import { AuthUserContext } from './context';
 import { withFirebase } from '../Firebase';
+
 import { compose } from 'recompose';
 
 type AuthState = {
-    authUser: null;
+    authUser: object;
 };
-const withAuthorization = (Component: ComponentType): ComponentType => {
+const withAuthentication = (Component: any): ComponentType => {
     class WithAuthentication extends React.Component<{ firebase: any }, AuthState> {
         public listener: any;
         constructor(props: any) {
             super(props);
             this.state = {
-                authUser: null,
+                authUser: {},
             };
             this.listener = this.props.firebase.auth.onAuthStateChanged((authUser: any) => {
-                authUser ? this.setState({ authUser }) : this.setState({ authUser: null });
+                authUser ? this.setState({ authUser }) : this.setState({ authUser: {} });
+                localStorage.setItem('authUser', JSON.stringify(authUser));
             });
+        }
+        componentWillUnmount() {
+            this.listener();
         }
         render() {
             const { authUser } = this.state;
@@ -30,4 +35,4 @@ const withAuthorization = (Component: ComponentType): ComponentType => {
     return compose(withFirebase)(WithAuthentication);
 };
 
-export { withAuthorization };
+export { withAuthentication };

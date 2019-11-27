@@ -39,8 +39,20 @@ export class Firebase {
             .collection('tutorials')
             .get()
             .then((snapshot: any) => {
-                const data = snapshot.docs.map((doc: { data: Function }) => doc.data());
+                const data = snapshot.docs.map((doc: { data: Function; id: string }) => ({
+                    ...doc.data(),
+                    id: doc.id,
+                }));
                 return data;
+            });
+    };
+    getDocumentById = async (docId: string) => {
+        return this.database
+            .collection('tutorials')
+            .doc(docId)
+            .get()
+            .then((doc: { data: Function }) => {
+                return doc.data();
             });
     };
 }
