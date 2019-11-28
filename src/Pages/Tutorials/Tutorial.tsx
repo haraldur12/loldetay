@@ -1,9 +1,11 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
+import Popup from 'reactjs-popup';
 import './Tutorial.css';
-import { withFirebase } from '../../services';
+import { withData } from '../../services';
 import { getChampion } from './utilities/getChampion';
+import { TutorialSpell } from './components';
 
-const TutorialPage: FunctionComponent<{ firebase: any; match: any }> = props => {
+const TutorialPage: FunctionComponent<{ firebase: any; match: any; firestore: Firestore }> = props => {
     const tutorialId = props.match.params.id;
     const [tutorial, setTutorial] = useState<Tutorial>({
         champion: '',
@@ -33,7 +35,7 @@ const TutorialPage: FunctionComponent<{ firebase: any; match: any }> = props => 
         allytips: [],
     });
     useEffect(() => {
-        props.firebase.getDocumentById(tutorialId).then((doc: Tutorial) => {
+        props.firestore.getDocumentById(tutorialId).then((doc: Tutorial) => {
             const { champion } = doc;
             getChampion(champion).then(data => {
                 setTutorial(doc);
@@ -49,16 +51,27 @@ const TutorialPage: FunctionComponent<{ firebase: any; match: any }> = props => 
             <div className="tutorial-page-block">
                 <div className="tutorial-page-header">{champion}</div>
                 <div className="tutorial-page-description">{description}</div>
+                <div className="tutorial-page-skills-header">Yetenekler</div>
                 {['q', 'w', 'e', 'r'].map((spell, index: number) => {
                     const currentSpellSet = spells[index] || {};
-                    const { image = { group: '', full: '' } } = currentSpellSet;
+                    const { image = { group: '', full: '' }, name, description, id } = currentSpellSet;
                     return (
                         <div className="tutorial-page-skills" key={spell}>
                             <div className="tutorial-page-skill-row">
-                                <img
-                                    className="tutorial-page-skill-item-image"
-                                    src={`http://ddragon.leagueoflegends.com/cdn/9.22.1/img/${image.group}/${image.full}`}
-                                />
+                                <Popup
+                                    trigger={
+                                        <img
+                                            className="tutorial-page-skill-item-image"
+                                            src={`http://ddragon.leagueoflegends.com/cdn/9.22.1/img/${image.group}/${image.full}`}
+                                        />
+                                    }
+                                    on="hover"
+                                    position="right center"
+                                    closeOnDocumentClick
+                                >
+                                    <TutorialSpell id={id} image={image} name={name} description={description} />
+                                </Popup>
+
                                 {skillCount.map((_, index) => (
                                     <div
                                         key={index}
@@ -80,5 +93,5 @@ const TutorialPage: FunctionComponent<{ firebase: any; match: any }> = props => 
     );
 };
 
-const Tutorial = withFirebase(TutorialPage);
+const Tutorial = withData(TutorialPage);
 export { Tutorial };

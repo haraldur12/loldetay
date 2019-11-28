@@ -6,10 +6,23 @@
 }
 .tutorial-page-block {
     grid-area: tutorial;
+    padding: 20px;
+}
+.tutorial-page-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bolder;
 }
 .tutorial-page-skills {
     display: flex;
     flex-direction: column;
+    color:gainsboro;
+    font-weight: bolder;
+}
+.tutorial-page-skills-header {
+    font-size:24px;
+    padding: 20px;
 }
 .tutorial-page-skill-row {
     display: flex;
@@ -28,7 +41,8 @@
     margin:5px;
     width:48px;
     height:48px;
-    background:greenyellow;
+    background:darkcyan;
+    opacity: 0.9;
 }
 .tutorial-page-skill-item-image {
     width:48px;
