@@ -1,0 +1,12 @@
+{
+    "build": {
+        "env": {
+            "REACT_APP_API_KEY":"@react-app-api-key",
+            "REACT_APP_AUTH_DOMAIN":"@react-app-auth-domain",
+            "REACT_APP_DATABASE_URL":"@react-app-database-url",
+            "REACT_APP_PROJECT_ID":"@react-app-project-id",
+            "REACT_APP_STORAGE_BUCKET":"react-app-storage-bucket",
+            "REACT_APP_MESSAGING_SENDER_ID":"@react-app-messaging-sender-id"
+        }
+    }
+}
