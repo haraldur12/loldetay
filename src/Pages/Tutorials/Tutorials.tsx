@@ -1,9 +1,10 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
-import { withFirebase } from '../../services';
+import { withData } from '../../services';
 import './Tutorials.css';
 import { Link } from 'react-router-dom';
+import { firestore } from 'firebase';
 
-const TutorialsPage: FunctionComponent<{ firebase: any; match: any }> = props => {
+const TutorialsPage: FunctionComponent<{ firebase: any; match: any; firestore: Firestore }> = props => {
     const [tutorials, setTutorials] = useState([
         {
             champion: 'Teemo',
@@ -20,7 +21,7 @@ const TutorialsPage: FunctionComponent<{ firebase: any; match: any }> = props =>
         },
     ]);
     useEffect(() => {
-        props.firebase.getData().then((data: any) => {
+        props.firestore.getData().then((data: any) => {
             setTutorials(data);
         });
     }, []);
@@ -54,4 +55,4 @@ const TutorialsPage: FunctionComponent<{ firebase: any; match: any }> = props =>
     );
 };
 
-export const Tutorials = withFirebase(TutorialsPage);
+export const Tutorials = withData(TutorialsPage);
