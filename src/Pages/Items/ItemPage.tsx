@@ -2,6 +2,7 @@ import React, { FunctionComponent, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getItems } from './utilities/getItems';
 import ReactTooltip from 'react-tooltip';
+
 import './ItemPage.css';
 
 interface Item {
@@ -76,8 +77,8 @@ const ItemPage: FunctionComponent<{ match: any }> = ({ match }) => {
                     {item.into.map(itemId => {
                         if (builds[itemId]) {
                             return (
-                                <Link to={`/item/${itemId}`}>
-                                    <div className="item-page-info" key={itemId}>
+                                <Link to={`/item/${itemId}`} key={itemId}>
+                                    <div className="item-page-info">
                                         <img
                                             className="item-page-info-image"
                                             src={`http://ddragon.leagueoflegends.com/cdn/9.22.1/img/item/${itemId}.png`}

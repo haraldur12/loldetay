@@ -1,1 +1,1 @@
-export { TutorialSpell } from './TutorialSpell';
+export * from './TutorialSpells';

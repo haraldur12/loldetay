@@ -14,6 +14,7 @@ const tags: tags = {
     Health: 'Can',
     Jungle: 'Jungle',
     LifeSteal: 'Can Calma',
+    Consumables: 'Potlar',
 };
 
 export { tags };

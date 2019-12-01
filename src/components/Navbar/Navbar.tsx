@@ -28,12 +28,6 @@ const Navbar: FunctionComponent = props => {
                             <Link to="/tutorials" className="link" onClick={(): void => setActive(false)}>
                                 Rehberler
                             </Link>
-                            <Link to="/questions" className="link" onClick={(): void => setActive(false)}>
-                                Sorular
-                            </Link>
-                            <Link to="/rankings" className="link" onClick={(): void => setActive(false)}>
-                                Siralamalar
-                            </Link>
                         </div>
                         <div className="right">
                             <Link

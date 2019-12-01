@@ -47,3 +47,11 @@ ol {
     font-style: bolder;
     font-size: 12px;
 }
+
+.tutorials-list-item-link {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    color: white;
+  }

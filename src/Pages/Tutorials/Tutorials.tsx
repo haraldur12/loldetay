@@ -32,7 +32,7 @@ const TutorialsPage: FunctionComponent<{ firebase: any; match: any; firestore: F
                     const { champion, description, createdAt, id } = tutorial;
                     const date = new Date(createdAt.seconds * 1000).toDateString();
                     return (
-                        <Link to={`/tutorial/${id}`} key={id}>
+                        <Link to={`/tutorial/${id}`} key={id} className="tutorials-list-item-link">
                             <li
                                 key={champion}
                                 className="tutorials-list-item"
