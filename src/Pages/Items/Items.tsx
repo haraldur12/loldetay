@@ -4,16 +4,8 @@ import { Item } from './Item';
 import { tags } from './constants';
 import './Items.css';
 
-interface Item {
-    [index: string]: {
-        name: string;
-        description: string;
-        tags: string[];
-    };
-}
-
 const Items: FunctionComponent = () => {
-    const [items, setItems] = useState<Item>({});
+    const [items, setItems] = useState<Items>({});
     const [activeSection, setActiveSection] = useState<string>('Boots');
     const [isMenuActive, setMenuStatus] = useState<boolean>(false);
     useEffect(() => {

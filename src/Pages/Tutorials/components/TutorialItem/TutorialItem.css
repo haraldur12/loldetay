@@ -1,0 +1,27 @@
+  
+.tutorial-item-image-block {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  justify-content: center;
+  color:azure;
+  padding: 0.5em;
+}
+.tutorial-item-image-block-single {
+    width: 48px;
+    height: 48px;
+    padding: 1em;
+    color: white;
+}
+.tutorial-item-text {
+    width: 48px;
+    padding: 0.5em;
+}
+@media (max-width: 620px) {
+    .tutorial-item-text {
+        display: none;
+    }
+    .tutorial-item-image-block-single {
+      padding: 0;
+    }
+  }

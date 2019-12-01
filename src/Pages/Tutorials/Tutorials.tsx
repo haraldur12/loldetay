@@ -18,6 +18,7 @@ const TutorialsPage: FunctionComponent<{ firebase: any; match: any; firestore: F
             createdAt: {
                 seconds: 0,
             },
+            items: {},
         },
     ]);
     useEffect(() => {
@@ -44,7 +45,7 @@ const TutorialsPage: FunctionComponent<{ firebase: any; match: any; firestore: F
                                     className="tutorials-list-item-icon"
                                     src={`http://ddragon.leagueoflegends.com/cdn/9.22.1/img/champion/${champion}.png`}
                                 />
-                                <p className="tutorials-list-item-text">{description}</p>
+                                <p className="tutorials-list-item-text">{description.substring(0, 150)}</p>
                                 <span className="tutorials-list-item-date">{date}</span>
                             </li>
                         </Link>

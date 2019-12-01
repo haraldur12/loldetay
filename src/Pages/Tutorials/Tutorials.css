@@ -1,7 +1,7 @@
 .tutorials-page {
     color: gainsboro;
     display: grid;
-    grid-template-columns: minmax() 900px minmax();
+    grid-template-columns: auto 800px auto;
     grid-template-areas: ". list .";
     grid-template-rows:auto;
 }
@@ -13,7 +13,8 @@ ol {
 }
 @media (max-width:48em){
     .tutorials-page{
-        grid-template-areas: 'list'
+        grid-template-columns: auto;
+        grid-template-areas: 'list';
     }
 }
 .tutorials-list  {
@@ -29,6 +30,7 @@ ol {
     padding: 5px;
     border:5px solid salmon;
     margin:5px;
+    max-height: 200px;
 }
 .tutorials-list-item:hover{
     border:5px solid azure;

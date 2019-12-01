@@ -1,6 +1,5 @@
 interface Tutorial {
     champion: string;
-    itemIds: string[];
     createdAt: {
         seconds: number;
     };
@@ -10,4 +9,7 @@ interface Tutorial {
     description: string;
     data: ChampionData;
     id: string;
+    items: {
+        [key: string]: number[];
+    };
 }

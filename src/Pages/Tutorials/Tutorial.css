@@ -1,12 +1,24 @@
 .tutorial-page{
     color:gainsboro;
     display:grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto 1200px auto;
     grid-template-areas: '. tutorial .'
 }
 .tutorial-page-block {
     grid-area: tutorial;
     padding: 20px;
+}
+.tutorial-page-block-intro {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid antiquewhite;
+    padding: 10px;
+}
+.tutorial-page-spells-block {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid antiquewhite;
+    padding: 10px;
 }
 .tutorial-page-header {
     margin-bottom: 20px;
@@ -15,3 +27,47 @@
     padding: 20px;
 }
 
+.tutorial-page-item-header {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 20px;
+}
+.tutorial-page-item-content {
+    display: flex;
+    flex-direction: row;
+    max-width: 600px;
+}
+.tutorial-page-double-wrapper {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid antiquewhite;
+}
+.tutorial-page-items-block {
+    min-width: 540px;
+}
+.tutorial-page-runes-block {
+    min-width: 600px;
+}
+
+@media (max-width: 620px) {
+    .tutorial-page {
+        grid-template-columns: auto;
+        grid-template-areas: 'tutorial'
+    }
+    .tutorial-page-item-content{
+        max-width: inherit;
+    }
+    .tutorial-page-double-wrapper {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .tutorial-page-items-block {
+        min-width: 0;
+    }
+    .tutorial-page-runes-block {
+        min-width: 0;
+    }
+  }

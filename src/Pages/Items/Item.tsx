@@ -3,8 +3,11 @@ import ReactTooltip from 'react-tooltip';
 import { Link } from 'react-router-dom';
 
 import './Item.css';
-
-const Item: FunctionComponent<{ itemId: string; data: { name: string } }> = ({ itemId, data }) => {
+type ItemProps = {
+    itemId: string;
+    data: { name: string };
+};
+const Item: FunctionComponent<ItemProps> = ({ itemId, data }) => {
     const { name } = data;
     return (
         <Link to={`/item/${itemId}`}>

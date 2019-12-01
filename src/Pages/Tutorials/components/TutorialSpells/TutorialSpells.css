@@ -30,11 +30,12 @@
     height:48px;
     margin:5px;
 }
+
 @media (max-width: 620px) {
     .tutorial-page-spells {
         flex-direction: row;
         }
-    .tutorial-page-spell-row {
+    .tutorial-page-spells-row {
         flex-direction: column;
     }
   }
