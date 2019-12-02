@@ -10,7 +10,7 @@ const Main: FunctionComponent = () => {
             }}
         >
             <div className="main">
-                <div>LoL Detay</div>
+                <div>Moba Pulse</div>
                 <div>League of Legends'in Buyulu Dunyasini Kesfedin.</div>
             </div>
         </div>

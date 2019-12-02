@@ -16,7 +16,7 @@ const Navbar: FunctionComponent = props => {
                             <i className="fa fa-reorder"></i>
                         </span>
                         <Link to="/">
-                            <span className="brand">LoL Detay</span>
+                            <span className="brand">Moba Pulse</span>
                         </Link>
                         <div className="left">
                             <Link to="/champions" className="link" onClick={(): void => setActive(false)}>
