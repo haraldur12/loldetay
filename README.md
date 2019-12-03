@@ -24,3 +24,7 @@ then you can start the app with `npm start`
 ## Deploying
 
 To deploy the app you will need to use now.sh if you want to make use of the current set up.
+
+## To Do
+
+* Improve user's profile section
