@@ -14,6 +14,7 @@ const TutorialsPage: FunctionComponent<{ firebase: any; match: any; firestore: F
                 blurb: '',
             },
             spells: {},
+            summonerSpells: [],
             description: '',
             createdAt: {
                 seconds: 0,

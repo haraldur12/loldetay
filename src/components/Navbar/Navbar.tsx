@@ -16,6 +16,7 @@ const Navbar: FunctionComponent = props => {
                             <i className="fa fa-reorder"></i>
                         </span>
                         <Link to="/">
+                            <img className="navbar-image" src={`${process.env.PUBLIC_URL}/favicon-32x32.png`} />
                             <span className="brand">Moba Pulse</span>
                         </Link>
                         <div className="left">

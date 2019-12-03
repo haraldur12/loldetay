@@ -1,6 +1,5 @@
 .navbar {
   background: black;
-
 }
 nav {
   display: block;
@@ -16,6 +15,9 @@ nav {
   text-decoration: none;
   color: white;
 }
+.navbar-image {
+ text-decoration: none;
+}
 .navbar .link:hover, .navbar .link:active .link:focus .link:visited {
   background: azure(218, 206, 206);
   text-decoration: none;
@@ -24,7 +26,6 @@ nav {
 .navbar .brand {
   width: 10em;
   text-align: center;
-  padding: 1em;
   color: darkcyan;
   font-weight: bolder;
   background: black;
@@ -66,6 +67,9 @@ nav {
   .navbar.active .toggle {
     background: seagreen;
     color: white;
+  }
+  .navbar-image {
+    display: none;
   }
   .navbar.active div {
     display: block;

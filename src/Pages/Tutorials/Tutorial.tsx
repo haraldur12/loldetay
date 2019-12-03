@@ -1,42 +1,44 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import { withData } from '../../services';
-import { getChampion } from './utilities/getChampion';
+import { getChampion, getItems, getSummonerSpells } from './utilities';
 import { TutorialSpells } from './components';
 
 import './Tutorial.css';
 import { itemPhases } from './constants';
-import { getItems } from '../Items/utilities/getItems';
 import { TutorialItem } from './components/TutorialItem';
 import { TutorialChampion } from './components/TutorialChampion';
+
+const TUTORIAL_INITIAL = {
+    champion: '',
+    spells: {
+        q: [],
+        w: [],
+        e: [],
+        r: [],
+    },
+    summonerSpells: [],
+    description: '',
+    createdAt: {
+        seconds: 0,
+    },
+    items: {
+        starter: [1001],
+        mid: [],
+        full: [],
+        towardsMid: [],
+        firstBase: [],
+        situational: [],
+    },
+    data: {},
+    id: '',
+};
 
 const TutorialPage: FunctionComponent<{ firebase: any; match: any; firestore: Firestore }> = props => {
     const tutorialId = props.match.params.id;
 
     const [items, setItems] = useState<Items>({});
 
-    const [tutorial, setTutorial] = useState<Tutorial>({
-        champion: '',
-        spells: {
-            q: [],
-            w: [],
-            e: [],
-            r: [],
-        },
-        description: '',
-        createdAt: {
-            seconds: 0,
-        },
-        items: {
-            starter: [1001],
-            mid: [],
-            full: [],
-            towardsMid: [],
-            firstBase: [],
-            situational: [],
-        },
-        data: {},
-        id: '',
-    });
+    const [tutorial, setTutorial] = useState<Tutorial>(TUTORIAL_INITIAL);
 
     const [championData, setChampionData] = useState<Champion>({
         name: '',
@@ -63,7 +65,7 @@ const TutorialPage: FunctionComponent<{ firebase: any; match: any; firestore: Fi
         });
     }, []);
 
-    const { champion, description, spells: spellsFromTutorial, items: itemsFromTutorial } = tutorial;
+    const { champion, description, spells: spellsFromTutorial, items: itemsFromTutorial, summonerSpells } = tutorial;
 
     const { spells: spellFromChampionData } = championData;
     if (Object.keys(items).length < 1) return null;
@@ -76,7 +78,7 @@ const TutorialPage: FunctionComponent<{ firebase: any; match: any; firestore: Fi
                         backgroundImage: `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_2.jpg)`,
                     }}
                 >
-                    <TutorialChampion champName={champion} summonerSpells={[1, 2, 3]} />
+                    <TutorialChampion champName={champion} summonerSpells={summonerSpells} />
                     <div className="tutorial-page-description">{description}</div>
                 </div>
                 <div className="tutorial-page-spells-block">

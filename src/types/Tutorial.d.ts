@@ -3,6 +3,7 @@ interface Tutorial {
     createdAt: {
         seconds: number;
     };
+    summonerSpells: string[];
     spells: {
         [key: string]: number[];
     };

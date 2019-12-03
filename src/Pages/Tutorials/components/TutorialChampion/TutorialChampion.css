@@ -1,0 +1,35 @@
+.tutorial-page-champion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.tutorial-page-champion-image {
+    display: flex;
+    flex-direction: column;
+}
+
+.tutorial-page-champion-header {
+    font-size: 24px;
+    font-weight: bolder;
+    padding: 20px;
+}
+.tutorial-page-champion-spells {
+    display: flex;
+    flex-direction: column;
+    align-self: auto;
+    margin-bottom:20px;
+}
+.tutorial-page-champion-spells-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: auto;
+}
+@media (max-width: 620px) {
+    .tutorial-page-champion {
+        flex-direction: column;
+    }
+    .tutorial-page-champion-image {
+        align-self: center;
+    }
+  }
