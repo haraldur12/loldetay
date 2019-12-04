@@ -5,6 +5,17 @@
     grid-template-rows:minmax();
     grid-template-areas: "menuSection items"
 }
+.items-search {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: black;
+    color:gainsboro;
+    height:30px;
+    line-height: 60px;
+    font-size:bolder;
+    text-align: center;
+}
 @media (max-width:48em){
     .items-index {
         grid-template-columns: auto;
@@ -20,6 +31,9 @@
       .items-menu .toggle {
           display: flex;
       }
+      .items-search  {
+        display:none;
+    }
 }
 .category-header {
     text-align: center;

@@ -9,8 +9,8 @@
     grid-template-rows: 150px 150px 800px;
     background-size: cover;
     grid-template-areas: 
-        "info sell"
-        "builds builds"
+        ". info sell ."
+        ". builds builds ."
 }
 .item-builds-into {
     grid-area: builds;
@@ -51,6 +51,7 @@
     margin-top:10px;
     display: flex;
     flex-direction: row;
+    text-decoration: none;
     border:1px solid gainsboro;
     padding: 10px;
     border-radius: 5px 20px 5px;
@@ -75,5 +76,7 @@
 .item-page-info-image {
     padding: 10px;
     border-radius: 10px;
+    width: 82px;
+    height:82px;
     border:3px solid tomato;
 }
