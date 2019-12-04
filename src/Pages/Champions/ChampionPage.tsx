@@ -35,7 +35,7 @@ const ChampionPage: FunctionComponent<{ match: any }> = ({ match }) => {
         <div
             className="champion-page"
             style={{
-                backgroundImage: `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championName}_1.jpg)`,
+                backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championName}_1.jpg)`,
             }}
         >
             <div className="champion-page-lore">
@@ -44,7 +44,7 @@ const ChampionPage: FunctionComponent<{ match: any }> = ({ match }) => {
                 </div>
                 <img
                     className="champion-page-image"
-                    src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${name}_0.jpg`}
+                    src={`https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${name}_0.jpg`}
                 />
                 <div className="champion-page-lore-info">{champion.lore}</div>
             </div>

@@ -7,7 +7,7 @@ const Champion: FunctionComponent<{ champName: string }> = ({ champName }) => {
         <Link to={`/champion/${champName}`}>
             <img
                 data-tip={champName}
-                src={`http://ddragon.leagueoflegends.com/cdn/9.22.1/img/champion/${champName}.png`}
+                src={`https://ddragon.leagueoflegends.com/cdn/9.22.1/img/champion/${champName}.png`}
             />
             <ReactTooltip />
         </Link>

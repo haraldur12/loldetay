@@ -12,7 +12,7 @@ const ChampionSpells: FunctionComponent<{ spells: Array<Spell> }> = ({ spells })
                                 <span>
                                     <img
                                         className="champion-page-skill-item-image"
-                                        src={`http://ddragon.leagueoflegends.com/cdn/9.22.1/img/${image.group}/${image.full}`}
+                                        src={`https://ddragon.leagueoflegends.com/cdn/9.22.1/img/${image.group}/${image.full}`}
                                     />
                                 </span>
                                 <span className="champion-page-skill-item-name">{name}</span>

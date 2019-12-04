@@ -30,7 +30,7 @@ const TutorialChampion: FunctionComponent<{ champName: string; summonerSpells: s
                 <Link to={`/champion/${champName}`}>
                     <img
                         data-tip={champName}
-                        src={`http://ddragon.leagueoflegends.com/cdn/9.22.1/img/champion/${champName}.png`}
+                        src={`https://ddragon.leagueoflegends.com/cdn/9.22.1/img/champion/${champName}.png`}
                     />
                     <ReactTooltip />
                 </Link>
@@ -46,7 +46,7 @@ const TutorialChampion: FunctionComponent<{ champName: string; summonerSpells: s
                                     <img
                                         key={spell}
                                         data-tip={currentSummonerSpell.name}
-                                        src={`http://ddragon.leagueoflegends.com/cdn/9.22.1/img/spell/${spell}.png`}
+                                        src={`https://ddragon.leagueoflegends.com/cdn/9.22.1/img/spell/${spell}.png`}
                                     />
                                     <ReactTooltip />
                                 </>

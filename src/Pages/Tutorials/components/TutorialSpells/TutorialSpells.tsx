@@ -24,7 +24,7 @@ const TutorialSpells: FunctionComponent<TutorialSpellsProps> = props => {
                             trigger={
                                 <img
                                     className="tutorial-page-spell-item-image"
-                                    src={`http://ddragon.leagueoflegends.com/cdn/9.22.1/img/${image.group}/${image.full}`}
+                                    src={`https://ddragon.leagueoflegends.com/cdn/9.22.1/img/${image.group}/${image.full}`}
                                 />
                             }
                             on="hover"

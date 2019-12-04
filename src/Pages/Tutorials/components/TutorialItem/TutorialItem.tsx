@@ -13,7 +13,7 @@ const TutorialItem: FunctionComponent<TutorialItemProps> = ({ itemId, name }) =>
             <img
                 data-tip={name}
                 className="tutorial-item-image-block-single"
-                src={`http://ddragon.leagueoflegends.com/cdn/9.22.1/img/item/${itemId}.png`}
+                src={`https://ddragon.leagueoflegends.com/cdn/9.22.1/img/item/${itemId}.png`}
             />
             <ReactTooltip />
             <span className="tutorial-item-text ">{name}</span>

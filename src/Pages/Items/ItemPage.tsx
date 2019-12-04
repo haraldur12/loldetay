@@ -55,7 +55,7 @@ const ItemPage: FunctionComponent<{ match: any }> = ({ match }) => {
                 <img
                     data-tip={item.name}
                     className="item-page-info-image"
-                    src={`http://ddragon.leagueoflegends.com/cdn/9.22.1/img/item/${itemId}.png`}
+                    src={`https://ddragon.leagueoflegends.com/cdn/9.22.1/img/item/${itemId}.png`}
                 />
                 <div>
                     <div className="item-page-info-header">{item.name}</div>
@@ -81,7 +81,7 @@ const ItemPage: FunctionComponent<{ match: any }> = ({ match }) => {
                                     <div className="item-page-info">
                                         <img
                                             className="item-page-info-image"
-                                            src={`http://ddragon.leagueoflegends.com/cdn/9.22.1/img/item/${itemId}.png`}
+                                            src={`https://ddragon.leagueoflegends.com/cdn/9.22.1/img/item/${itemId}.png`}
                                         />
                                         <div>
                                             <div className="item-page-info-header">{builds[itemId].name}</div>

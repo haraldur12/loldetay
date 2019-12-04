@@ -39,12 +39,12 @@ const TutorialsPage: FunctionComponent<{ firebase: any; match: any; firestore: F
                                 key={champion}
                                 className="tutorials-list-item"
                                 style={{
-                                    backgroundImage: `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_1.jpg)`,
+                                    backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_1.jpg)`,
                                 }}
                             >
                                 <img
                                     className="tutorials-list-item-icon"
-                                    src={`http://ddragon.leagueoflegends.com/cdn/9.22.1/img/champion/${champion}.png`}
+                                    src={`https://ddragon.leagueoflegends.com/cdn/9.22.1/img/champion/${champion}.png`}
                                 />
                                 <p className="tutorials-list-item-text">{description.substring(0, 150)}</p>
                                 <span className="tutorials-list-item-date">{date}</span>

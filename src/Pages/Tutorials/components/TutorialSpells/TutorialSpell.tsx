@@ -9,7 +9,7 @@ const TutorialSpell: FunctionComponent<Spell> = (props: Spell) => {
                 <span>
                     <img
                         className="tutorial-spell-item-image"
-                        src={`http://ddragon.leagueoflegends.com/cdn/9.22.1/img/${image.group}/${image.full}`}
+                        src={`https://ddragon.leagueoflegends.com/cdn/9.22.1/img/${image.group}/${image.full}`}
                     />
                 </span>
                 <span className="tutorial-spell-item-name">{name}</span>

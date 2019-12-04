@@ -6,7 +6,7 @@ const Main: FunctionComponent = () => {
         <div
             className="main-background"
             style={{
-                backgroundImage: `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Urgot_1.jpg)`,
+                backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Urgot_1.jpg)`,
             }}
         >
             <div className="main">

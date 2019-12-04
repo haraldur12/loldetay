@@ -14,7 +14,7 @@ const Item: FunctionComponent<ItemProps> = ({ itemId, data }) => {
             <img
                 data-tip={name}
                 className="item-image-single"
-                src={`http://ddragon.leagueoflegends.com/cdn/9.22.1/img/item/${itemId}.png`}
+                src={`https://ddragon.leagueoflegends.com/cdn/9.22.1/img/item/${itemId}.png`}
             />
             <ReactTooltip />
         </Link>

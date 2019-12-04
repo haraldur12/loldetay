@@ -75,7 +75,7 @@ const TutorialPage: FunctionComponent<{ firebase: any; match: any; firestore: Fi
                 <div
                     className="tutorial-page-block-intro"
                     style={{
-                        backgroundImage: `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_2.jpg)`,
+                        backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion}_2.jpg)`,
                     }}
                 >
                     <TutorialChampion champName={champion} summonerSpells={summonerSpells} />
