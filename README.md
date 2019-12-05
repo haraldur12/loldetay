@@ -1,3 +1,6 @@
+[![CircleCI](https://circleci.com/gh/haraldur12/MobaPulse/tree/master.svg?style=svg)](https://circleci.com/gh/haraldur12/MobaPulse/tree/master)
+[![Dependencies(https://img.shields.io/david/dev/haraldur12/mobapulse)]]
+
 ![](public/favicon.ico) 
 # Moba Pulse
 
