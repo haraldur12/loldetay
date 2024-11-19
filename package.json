@@ -13,7 +13,7 @@
     "@types/recompose": "^0.30.7",
     "@typescript-eslint/eslint-plugin": "^2.6.1",
     "@typescript-eslint/parser": "^2.6.1",
-    "firebase": "^7.5.0",
+    "firebase": "^10.9.0",
     "react": "^16.11.0",
     "react-burger-menu": "^2.6.12",
     "react-collapsible": "^2.6.0",
